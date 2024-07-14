@@ -1,5 +1,6 @@
 from django.urls import path
 from hello import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
   path("", views.home, name="home"),
@@ -8,3 +9,5 @@ urlpatterns = [
   # URL routes are case-sensitive, if you want /hello/<name> and /Hello/<name> - define paths for each
   path("hello/<name>", views.hello_there, name="hello_there"),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
