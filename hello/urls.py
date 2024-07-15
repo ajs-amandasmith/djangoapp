@@ -4,6 +4,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
   path("", views.home, name="home"),
+  path("about/", views.about, name="about"),
+  path("contact", views.contact, name="contact"),
   # path - defines a route "hello/" that accepts a variable string called 'name'
   # the string is passed to the 'views.hello_there' function specified in the second argument to 'path'
   # URL routes are case-sensitive, if you want /hello/<name> and /Hello/<name> - define paths for each
